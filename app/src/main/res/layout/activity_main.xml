@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextNota2"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="44dp"
+        android:ems="10"
+        android:hint="Nota 2"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNota4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextNota1"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeader" />
+
+    <EditText
+        android:id="@+id/editTextNota3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="97dp"
+        android:ems="10"
+        android:hint="Nota 3"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextNota4"
+        app:layout_constraintEnd_toStartOf="@+id/editTextNota4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextNota4" />
+
+    <EditText
+        android:id="@+id/editTextNota4"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="208dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="Nota 4"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextNota3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewHeader"
+        android:layout_width="0dp"
+        android:layout_height="69dp"
+        android:background="#3B129E"
+        android:backgroundTint="#3B129E"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="10dp"
+        android:text="App Media"
+        android:textColor="#FDFDFD"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextNota1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="97dp"
+        android:ems="10"
+        android:hint="Nota 1"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextNota2"
+        app:layout_constraintEnd_toStartOf="@+id/editTextNota2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextNota2" />
+
+    <Button
+        android:id="@+id/resetar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="47dp"
+        android:text="Resetar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNota4" />
+
+    <Button
+        android:id="@+id/calcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="60dp"
+        android:text="Calcular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNota3" />
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="61dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewReprovado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewAprovado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/imageViewReprovado"
+        app:layout_constraintTop_toTopOf="@+id/imageViewReprovado"
+        app:srcCompat="@drawable/aprovado" />
+
+    <ImageView
+        android:id="@+id/imageViewReprovado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="94dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/reprovado" />
+</androidx.constraintlayout.widget.ConstraintLayout>
